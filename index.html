@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Responsive Image Gallery</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+        <div class="rg-image-wrapper"> {{if itemsCount > 1}}
+            <div class="rg-image-nav"> <a href="#" class="rg-image-nav-prev">Previous Image</a> <a href="#" class="rg-image-nav-next">Next Image</a> </div> {{/if}}
+            <div class="rg-image"></div>
+            <div class="rg-loading"></div>
+            <div class="rg-caption-wrapper">
+                <div class="rg-caption" style="display:none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </script>
+</head>
+
+<body>
+    <div id="hint"></div>
+    <div class="infobloc">
+        <div class="container">
+            <div class="content">
+                <div id="rg-gallery" class="rg-gallery">
+                    <div class="rg-thumbs">
+                        <div class="es-carousel-wrapper">
+                            <div class="es-nav"> <span class="es-nav-prev">Previous</span> <span class="es-nav-next">Next</span> </div>
+                            <div class="es-carousel">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="Koenigsegg CCXR - US$ 2.173.950" data-idspec="0" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="Bugatti Veyron 16.4 Grand Sport - US$ 2.027.760" data-idspec="1"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/thumbs/3.jpg" data-large="images/3.jpg" alt="image03" data-description="Pagani Zonda Cinque Roadster - US$ 1.882.920"  data-idspec="2"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/thumbs/4.jpg" data-large="images/4.jpg" alt="image04" data-description="Lamborghini Reventón - US$ 1.454.400"  data-idspec="3"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/thumbs/5.jpg" data-large="images/5.jpg" alt="image05" data-description="Maybach Landaulet - US$ 1.380.000"  data-idspec="4"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/thumbs/6.jpg" data-large="images/6.jpg" alt="image06" data-description="SSC Ultimate Aero - US$ 740.000"  data-idspec="5"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="specifications">
+            <div class="label">
+                <label for="spec1">Кількість дверей</label>
+                <label for="spec2">Кількість місць</label>
+                <label for="spec3">Обєм двигуна, куб.см.</label>
+                <label for="spec4">Кількість целіндрів</label>
+                <label for="spec5">Клапанів на целіндр</label>
+                <label for="spec6">Розгін від 0 до 100 км/год., с.</label>
+                <label for="spec7">Максимальна швидкість, км/год.</label>
+                <label for="spec8">Довжина, мм.</label>
+                <label for="spec9">Ширина, мм.</label>
+                <label for="spec10">Повна маса, кг.</label>
+            </div>
+            <div class="spec">
+                <span class="unity" data-title=""><input id="spec1" type="text"></span>
+                <span class="unity" data-title=""><input id="spec2" type="text"></span>
+                <span class="unity" data-title=""><input id="spec3" type="text"></span>
+                <span class="unity" data-title=""><input id="spec4" type="text"></span>
+                <span class="unity" data-title=""><input id="spec5" type="text"></span>
+                <span class="unity" data-title=""><input id="spec6" type="text"></span>
+                <span class="unity" data-title=""><input id="spec7" type="text"></span>
+                <span class="unity" data-title=""><input id="spec8" type="text"></span>
+                <span class="unity" data-title=""> <input id="spec9" type="text"></span>
+                <span class="unity" data-title=""><input id="spec10" type="text"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="reviews">
+        <div class="label">
+            <label for="comment">Коментар власника</label>
+            <span class="unity"><textarea id="comment" rows="5"></textarea></span>
+            <span class="unity" data-title=""><input id="name" type="text" placeholder="П.І.П."></span>
+            <span class="unity" data-title=""><input id="telephone" type="text" placeholder="Телефон"></span>
+            <span class="unity" data-title=""><input id="email" type="text" placeholder="E-mail"></span>
+            <input type="button" value="Відправити" id="send">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/spec.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+
+    <script type="text/javascript" src="js/gallery.js"></script>
+    <script src="js/event.js"></script>
+</body>
+
+</html>
